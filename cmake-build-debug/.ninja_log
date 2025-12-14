@@ -1,0 +1,6 @@
+# ninja log v6
+1	778	7874504074555581	CMakeFiles/ArcadiaEngine.dir/main.cpp.obj	207b78f74fc19e00
+9	1106	7874504074632499	CMakeFiles/ArcadiaEngine.dir/ArcadiaEngine.cpp.obj	e6f7b88ea6584bd5
+13	1203	7874504074662156	CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj	c2d3cfa007aa06cc
+5	1070	7874505558459648	CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj	c2d3cfa007aa06cc
+1071	1242	7874505569125340	ArcadiaEngine.exe	120fd17dc58109d6
