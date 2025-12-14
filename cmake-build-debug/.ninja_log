@@ -1,6 +1,8 @@
 # ninja log v6
+5	1070	7874505558459648	CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj	c2d3cfa007aa06cc
 1	778	7874504074555581	CMakeFiles/ArcadiaEngine.dir/main.cpp.obj	207b78f74fc19e00
 9	1106	7874504074632499	CMakeFiles/ArcadiaEngine.dir/ArcadiaEngine.cpp.obj	e6f7b88ea6584bd5
-13	1203	7874504074662156	CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj	c2d3cfa007aa06cc
-5	1070	7874505558459648	CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj	c2d3cfa007aa06cc
 1071	1242	7874505569125340	ArcadiaEngine.exe	120fd17dc58109d6
+1	397	7874513343080750	build.ninja	61d47cceabb0dd1b
+24	1103	7874513343950547	CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj	c2d3cfa007aa06cc
+1103	1260	7874513354742099	ArcadiaEngine.exe	55a60a3e70fccaad

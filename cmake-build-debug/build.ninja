@@ -49,20 +49,14 @@ cmake_ninja_workdir = C$:/Users/mmh20/OneDrive/Desktop/ArcadiaEngine/cmake-build
 
 build cmake_object_order_depends_target_ArcadiaEngine: phony || CMakeFiles/ArcadiaEngine.dir
 
-build CMakeFiles/ArcadiaEngine.dir/main.cpp.obj: CXX_COMPILER__ArcadiaEngine_unscanned_Debug C$:/Users/mmh20/OneDrive/Desktop/ArcadiaEngine/main.cpp || cmake_object_order_depends_target_ArcadiaEngine
-  DEP_FILE = CMakeFiles\ArcadiaEngine.dir\main.cpp.obj.d
+build CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj: CXX_COMPILER__ArcadiaEngine_unscanned_Debug C$:/Users/mmh20/OneDrive/Desktop/ArcadiaEngine/main_test_students.cpp || cmake_object_order_depends_target_ArcadiaEngine
+  DEP_FILE = CMakeFiles\ArcadiaEngine.dir\main_test_students.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\ArcadiaEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\ArcadiaEngine.dir
 
 build CMakeFiles/ArcadiaEngine.dir/ArcadiaEngine.cpp.obj: CXX_COMPILER__ArcadiaEngine_unscanned_Debug C$:/Users/mmh20/OneDrive/Desktop/ArcadiaEngine/ArcadiaEngine.cpp || cmake_object_order_depends_target_ArcadiaEngine
   DEP_FILE = CMakeFiles\ArcadiaEngine.dir\ArcadiaEngine.cpp.obj.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ArcadiaEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\ArcadiaEngine.dir
-
-build CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj: CXX_COMPILER__ArcadiaEngine_unscanned_Debug C$:/Users/mmh20/OneDrive/Desktop/ArcadiaEngine/main_test_students.cpp || cmake_object_order_depends_target_ArcadiaEngine
-  DEP_FILE = CMakeFiles\ArcadiaEngine.dir\main_test_students.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\ArcadiaEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\ArcadiaEngine.dir
@@ -75,7 +69,7 @@ build CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj: CXX_COMPILER__Arc
 #############################################
 # Link the executable ArcadiaEngine.exe
 
-build ArcadiaEngine.exe: CXX_EXECUTABLE_LINKER__ArcadiaEngine_Debug CMakeFiles/ArcadiaEngine.dir/main.cpp.obj CMakeFiles/ArcadiaEngine.dir/ArcadiaEngine.cpp.obj CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj
+build ArcadiaEngine.exe: CXX_EXECUTABLE_LINKER__ArcadiaEngine_Debug CMakeFiles/ArcadiaEngine.dir/main_test_students.cpp.obj CMakeFiles/ArcadiaEngine.dir/ArcadiaEngine.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ArcadiaEngine.dir
