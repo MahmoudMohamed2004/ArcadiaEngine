@@ -195,16 +195,16 @@ void test_PartD_Kernel() {
     }());
 }
 
-// int main() {
-//     cout << "Arcadia Engine - Student Happy Path Tests" << endl;
-//     cout << "-----------------------------------------" << endl;
-//
-//     test_PartA_DataStructures();
-//     test_PartB_Inventory();
-//     test_PartC_Navigator();
-//     test_PartD_Kernel();
-//
-//     runner.printSummary();
-//
-//     return 0;
-// }
+int main() {
+    cout << "Arcadia Engine - Student Happy Path Tests" << endl;
+    cout << "-----------------------------------------" << endl;
+
+    test_PartA_DataStructures();
+    test_PartB_Inventory();
+    test_PartC_Navigator();
+    test_PartD_Kernel();
+
+    runner.printSummary();
+
+    return 0;
+}
