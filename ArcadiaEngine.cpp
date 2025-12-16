@@ -24,25 +24,70 @@ using namespace std;
 
 class ConcretePlayerTable : public PlayerTable {
 private:
-    // TODO: Define your data structures here
-    // Hint: You'll need a hash table with double hashing collision resolution
+    static const int TABLE_SIZE = 101;
 
-public:
-    ConcretePlayerTable() {
-        // TODO: Initialize your hash table
+    struct Entry {
+        int key;
+        string value;
+        bool occupied;
+        Entry() : key(-1), value(""), occupied(false) {}
+    };
+
+    vector<Entry> table;
+
+    int h1(int key) const {
+        return key % TABLE_SIZE;
     }
 
+    int h2(int key) const {
+        return 1 + (key % (TABLE_SIZE - 1));
+    }
+
+public:
+    ConcretePlayerTable() : table(TABLE_SIZE) {}
+
     void insert(int playerID, string name) override {
-        // TODO: Implement double hashing insert
-        // Remember to handle collisions using h1(key) + i * h2(key)
+        int index = h1(playerID);
+        int step = h2(playerID);
+
+        for (int i = 0; i < TABLE_SIZE; ++i) {
+            int probe = (index + i * step) % TABLE_SIZE;
+
+            if (!table[probe].occupied) {
+                table[probe].key = playerID;
+                table[probe].value = name;
+                table[probe].occupied = true;
+                return;
+            }
+
+            // Update existing key
+            if (table[probe].occupied && table[probe].key == playerID) {
+                table[probe].value = name;
+                return;
+            }
+        }
+
+        throw runtime_error("Table is full");
     }
 
     string search(int playerID) override {
-        // TODO: Implement double hashing search
-        // Return "" if player not found
+        int index = h1(playerID);
+        int step = h2(playerID);
+
+        for (int i = 0; i < TABLE_SIZE; ++i) {
+            int probe = (index + i * step) % TABLE_SIZE;
+
+            if (!table[probe].occupied)
+                return "";
+
+            if (table[probe].key == playerID)
+                return table[probe].value;
+        }
+
         return "";
     }
 };
+
 
 // --- 2. Leaderboard (Skip List) ---
 
@@ -113,12 +158,30 @@ int InventorySystem::maximizeCarryValue(int capacity, vector<pair<int, int>>& it
 }
 
 long long InventorySystem::countStringPossibilities(string s) {
-    // TODO: Implement string decoding DP
-    // Rules: "uu" can be decoded as "w" or "uu"
-    //        "nn" can be decoded as "m" or "nn"
-    // Count total possible decodings
-    return 0;
+    const long long MOD = 1000000007;
+    int n = s.size();
+
+    vector<long long> dp(n + 1, 0);
+    dp[0] = 1;
+
+    for (int i = 1; i <= n; ++i) {
+        // Single character always valid
+        dp[i] = dp[i - 1];
+
+        // Check for "uu" or "nn"
+        if (i >= 2) {
+            if ((s[i - 2] == 'u' && s[i - 1] == 'u') ||
+                (s[i - 2] == 'n' && s[i - 1] == 'n')) {
+                dp[i] = (dp[i] + dp[i - 2]) % MOD;
+                }
+        }
+
+        dp[i] %= MOD;
+    }
+
+    return dp[n];
 }
+
 
 // =========================================================
 // PART C: WORLD NAVIGATOR (Graphs)
